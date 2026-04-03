@@ -1,0 +1,696 @@
+[gd_scene format=3 uid="uid://bhptdlc3n5b4d"]
+
+[ext_resource type="Script" uid="uid://20dogsjirk15" path="res://scripts/rooms/main.gd" id="1_nqvqg"]
+[ext_resource type="Texture2D" uid="uid://dpfop7rmg8rwq" path="res://assets/anims/default/1.png" id="1_o3ccl"]
+[ext_resource type="AudioStream" uid="uid://8lerrfoqj31n" path="res://assets/sounds/phoneRing01.wav" id="2_7modg"]
+[ext_resource type="Texture2D" uid="uid://b4plavi0q4ksp" path="res://assets/anims/phone_answer/1.png" id="3_46ya5"]
+[ext_resource type="AudioStream" uid="uid://cr6ctwfp4y2nq" path="res://assets/sounds/phoneAnswer.wav" id="3_c15bt"]
+[ext_resource type="Script" uid="uid://bsj3vhr83iif6" path="res://scripts/classes/clickable.gd" id="3_oafy4"]
+[ext_resource type="Texture2D" uid="uid://drjfsm0s36rl0" path="res://assets/anims/phone_ring/1.png" id="3_s0oqf"]
+[ext_resource type="Texture2D" uid="uid://bfhylqd6tq2li" path="res://assets/anims/phone_answer/2.png" id="4_4fwdu"]
+[ext_resource type="AudioStream" uid="uid://dqjb7hydaw7o" path="res://assets/sounds/no01.wav" id="4_7rbm1"]
+[ext_resource type="Texture2D" uid="uid://c8lsklnmnpts4" path="res://assets/anims/phone_ring/2.png" id="4_ngggl"]
+[ext_resource type="AudioStream" uid="uid://cq20g2lg8w7du" path="res://assets/sounds/phoneLaugh.wav" id="4_tvotl"]
+[ext_resource type="AudioStream" uid="uid://gmy0joqu4qrq" path="res://assets/sounds/phoneDrop.wav" id="4_wc1io"]
+[ext_resource type="Texture2D" uid="uid://b7s5aiw7mskhx" path="res://assets/anims/phone_ring/3.png" id="5_7modg"]
+[ext_resource type="Texture2D" uid="uid://d2qicnoee4hu1" path="res://assets/anims/phone_answer/3.png" id="5_ohgtf"]
+[ext_resource type="AudioStream" uid="uid://duhrg8kjubvhr" path="res://assets/sounds/yes01.wav" id="5_ppccw"]
+[ext_resource type="Texture2D" uid="uid://ia8rh1qktqna" path="res://assets/anims/phone_answer/4.png" id="6_03dn2"]
+[ext_resource type="Texture2D" uid="uid://ccmqjxosrg1qn" path="res://assets/anims/phone_ring/4.png" id="6_c15bt"]
+[ext_resource type="AudioStream" uid="uid://couj7nt0i720q" path="res://assets/sounds/sillyface01.wav" id="6_rtpiu"]
+[ext_resource type="Texture2D" uid="uid://b6g61x5clcxjw" path="res://assets/anims/phone_answer/5.png" id="7_8wwdf"]
+[ext_resource type="Texture2D" uid="uid://c6frpogh3sylx" path="res://assets/anims/phone_ring/5.png" id="7_w2qtj"]
+[ext_resource type="Texture2D" uid="uid://b7wtupk7odbqu" path="res://assets/anims/phone_ring/6.png" id="8_7loyl"]
+[ext_resource type="Texture2D" uid="uid://c8io0a5ymwv3s" path="res://assets/anims/phone_answer/6.png" id="8_h1vnn"]
+[ext_resource type="Texture2D" uid="uid://cmfb5ce4ssp7n" path="res://assets/anims/phone_answer/7.png" id="9_1eqyu"]
+[ext_resource type="Texture2D" uid="uid://o2hi0mbshtb0" path="res://assets/anims/phone_ring/7.png" id="9_isff2"]
+[ext_resource type="Texture2D" uid="uid://5tf8wdn3uvte" path="res://assets/anims/phone_answer/8.png" id="10_s0oqf"]
+[ext_resource type="Texture2D" uid="uid://j1803u4gicvj" path="res://assets/anims/phone_answer/9.png" id="11_ngggl"]
+[ext_resource type="Texture2D" uid="uid://bedgq3b5sqji3" path="res://assets/anims/phone_answer/10.png" id="12_7modg"]
+[ext_resource type="Texture2D" uid="uid://dnwvhssa7hhyy" path="res://assets/anims/phone_answer/11.png" id="13_c15bt"]
+[ext_resource type="Texture2D" uid="uid://c5h7rw08kpccq" path="res://assets/anims/phone_answer/12.png" id="14_w2qtj"]
+[ext_resource type="Texture2D" uid="uid://ciqtu7v1m62x4" path="res://assets/anims/phone_answer/13.png" id="15_7loyl"]
+[ext_resource type="Texture2D" uid="uid://cxp15qrjojadm" path="res://assets/anims/phone_answer/14.png" id="16_isff2"]
+[ext_resource type="Texture2D" uid="uid://dnjsit11ad4a1" path="res://assets/anims/phone_answer/15.png" id="17_alosr"]
+[ext_resource type="Texture2D" uid="uid://c6qylxugmmt8s" path="res://assets/anims/phone_answer/16.png" id="18_wxkmr"]
+[ext_resource type="Texture2D" uid="uid://d2vptfn5pv1p7" path="res://assets/anims/phone_answer/17.png" id="19_ofwpq"]
+[ext_resource type="Texture2D" uid="uid://q33uh284rt4r" path="res://assets/anims/default/3.png" id="20_dhmid"]
+[ext_resource type="Texture2D" uid="uid://c1s6pai34db1l" path="res://assets/anims/phone_drop/1.png" id="30_dhmid"]
+[ext_resource type="Texture2D" uid="uid://chj7m2hnlcni7" path="res://assets/anims/phone_drop/2.png" id="31_wc1io"]
+[ext_resource type="Texture2D" uid="uid://ce0cohyptbnqh" path="res://assets/anims/phone_drop/3.png" id="32_7rbm1"]
+[ext_resource type="Texture2D" uid="uid://dvjywvn0mpum7" path="res://assets/anims/phone_drop/4.png" id="33_ppccw"]
+[ext_resource type="Texture2D" uid="uid://b465outlh0sk0" path="res://assets/anims/phone_ho/1.png" id="34_kj1se"]
+[ext_resource type="Texture2D" uid="uid://ba1ls3f2d04g1" path="res://assets/anims/phone_drop/5.png" id="34_tvotl"]
+[ext_resource type="Texture2D" uid="uid://dxd3sanf1tvj4" path="res://assets/anims/phone_drop/6.png" id="35_rtpiu"]
+[ext_resource type="Texture2D" uid="uid://cwunm4842cd56" path="res://assets/anims/phone_ho/2.png" id="35_w2l1f"]
+[ext_resource type="Texture2D" uid="uid://pued44s7mq0s" path="res://assets/anims/phone_ho/3.png" id="36_f3lm4"]
+[ext_resource type="Texture2D" uid="uid://bpj87pibyrpwt" path="res://assets/anims/phone_drop/7.png" id="36_pqeqe"]
+[ext_resource type="Texture2D" uid="uid://c8d8nar470tf0" path="res://assets/anims/phone_drop/8.png" id="37_kmjkx"]
+[ext_resource type="Texture2D" uid="uid://io6wu8ffvxe2" path="res://assets/anims/phone_ho/4.png" id="37_r3sjm"]
+[ext_resource type="Texture2D" uid="uid://d258jrf4pn62t" path="res://assets/anims/phone_ho/5.png" id="38_313lf"]
+[ext_resource type="Texture2D" uid="uid://c8ipad3h443dp" path="res://assets/anims/phone_ho/6.png" id="39_gdq5b"]
+[ext_resource type="Texture2D" uid="uid://lkg8cleawtor" path="res://assets/anims/phone_ho/7.png" id="40_gvw2y"]
+[ext_resource type="Texture2D" uid="uid://2pqyp1wnbqfa" path="res://assets/anims/phone_ho/8.png" id="41_bcktw"]
+[ext_resource type="Texture2D" uid="uid://c01ovi21jacra" path="res://assets/anims/phone_ho/9.png" id="42_hshfw"]
+[ext_resource type="Texture2D" uid="uid://d1pucigrswpn1" path="res://assets/anims/phone_ho/10.png" id="43_7dce5"]
+[ext_resource type="Texture2D" uid="uid://coermr42ndbju" path="res://assets/anims/phone_ho/11.png" id="44_3nx5q"]
+[ext_resource type="Texture2D" uid="uid://lwwm103ne8jb" path="res://assets/anims/phone_ho/12.png" id="45_606si"]
+[ext_resource type="Texture2D" uid="uid://d0xdhh57vnagy" path="res://assets/anims/phone_ho/13.png" id="46_2rlsn"]
+[ext_resource type="Texture2D" uid="uid://d10beumuysyor" path="res://assets/anims/phone_ho/14.png" id="47_w3ioi"]
+[ext_resource type="Texture2D" uid="uid://cqx3w6kuwc71q" path="res://assets/anims/phone_ho/15.png" id="48_mqxhk"]
+[ext_resource type="Texture2D" uid="uid://bj2tc5kqod43h" path="res://assets/anims/phone_ho/16.png" id="49_7ppe2"]
+[ext_resource type="Texture2D" uid="uid://cxg4d82jppr5n" path="res://assets/anims/phone_no/1.png" id="50_boxdq"]
+[ext_resource type="Texture2D" uid="uid://b3pdj8jljvggx" path="res://assets/anims/phone_no/2.png" id="51_8twng"]
+[ext_resource type="Texture2D" uid="uid://b4bbbadtdpwhq" path="res://assets/anims/phone_no/3.png" id="52_a8jom"]
+[ext_resource type="Texture2D" uid="uid://dc3iep1n1x3er" path="res://assets/anims/phone_no/4.png" id="53_mvjns"]
+[ext_resource type="Texture2D" uid="uid://bm8jeittugv6p" path="res://assets/anims/phone_no/5.png" id="54_r264a"]
+[ext_resource type="Texture2D" uid="uid://c7yvmxxotpvrq" path="res://assets/anims/phone_no/6.png" id="55_mvdhr"]
+[ext_resource type="Texture2D" uid="uid://c5so66lu5ihqp" path="res://assets/anims/phone_no/7.png" id="56_n28xw"]
+[ext_resource type="Texture2D" uid="uid://cphg5l8dp2q7h" path="res://assets/anims/phone_sillyface/1.png" id="57_lf5ak"]
+[ext_resource type="Texture2D" uid="uid://ckmo3gmtqk3k2" path="res://assets/anims/phone_sillyface/2.png" id="58_80c5n"]
+[ext_resource type="Texture2D" uid="uid://cfur8g32pcr3v" path="res://assets/anims/phone_sillyface/3.png" id="59_rio8x"]
+[ext_resource type="Texture2D" uid="uid://b4jg0a5mojy3a" path="res://assets/anims/phone_sillyface/4.png" id="60_h8v4r"]
+[ext_resource type="Texture2D" uid="uid://b84l2hsm0tcga" path="res://assets/anims/phone_sillyface/5.png" id="61_ywlpl"]
+[ext_resource type="Texture2D" uid="uid://xubii0n6c0s" path="res://assets/anims/phone_sillyface/6.png" id="62_io8y4"]
+[ext_resource type="Texture2D" uid="uid://cu7uuddk7nogp" path="res://assets/anims/phone_sillyface/7.png" id="63_46mjm"]
+[ext_resource type="Texture2D" uid="uid://d13attqtsduak" path="res://assets/anims/phone_sillyface/8.png" id="64_1ko3o"]
+[ext_resource type="Texture2D" uid="uid://d02c08mwnrpn6" path="res://assets/anims/phone_sillyface/9.png" id="65_aitma"]
+[ext_resource type="Texture2D" uid="uid://bssloamr0i0en" path="res://assets/anims/phone_yes/1.png" id="66_q8bqm"]
+[ext_resource type="Texture2D" uid="uid://djhpx5vx5psvl" path="res://assets/anims/phone_yes/2.png" id="67_ya04r"]
+[ext_resource type="Texture2D" uid="uid://cndyl0350xchd" path="res://assets/anims/phone_yes/3.png" id="68_3whqq"]
+[ext_resource type="Texture2D" uid="uid://cpq3ho6bv34yp" path="res://assets/anims/phone_yes/4.png" id="69_mddl1"]
+[ext_resource type="Texture2D" uid="uid://cl5dp3kb3qqcg" path="res://assets/anims/phone_yes/5.png" id="70_400vj"]
+[ext_resource type="Texture2D" uid="uid://by653l1kkk2iu" path="res://assets/anims/phone_yes/6.png" id="71_0oudy"]
+[ext_resource type="Texture2D" uid="uid://b4j3waexe82fb" path="res://assets/anims/phone_yes/7.png" id="72_2h5tc"]
+[ext_resource type="Texture2D" uid="uid://x3q1abnjbake" path="res://assets/anims/phone_yes/8.png" id="73_geked"]
+[ext_resource type="Texture2D" uid="uid://gvhb7xlr4rds" path="res://assets/anims/phone_yes/9.png" id="74_aqx6f"]
+
+[sub_resource type="Animation" id="Animation_kj1se"]
+resource_name = "RESET"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default"],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_46ya5"]
+resource_name = "phone_answer"
+length = 2.7333333
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1666666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"default_phone_ring"],
+"method": &"play"
+}, {
+"args": [&"phone_answer"],
+"method": &"play"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_7modg")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_c15bt")
+}],
+"times": PackedFloat32Array(0, 1.1666666)
+}
+tracks/1/use_blend = true
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.7333333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_phone_reset"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_tvotl"]
+resource_name = "phone_answer_no"
+length = 1.4666667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"phone_answer_laugh"],
+"method": &"play"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_tvotl")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ppccw"]
+resource_name = "phone_answer_no"
+length = 0.6666667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"phone_answer_no"],
+"method": &"play"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_7rbm1")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_rtpiu"]
+resource_name = "phone_answer_no"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"phone_answer_sillyface"],
+"method": &"play"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_rtpiu")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_pqeqe"]
+resource_name = "phone_answer_no"
+length = 0.93333334
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"phone_answer_yes"],
+"method": &"play"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_ppccw")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_7rbm1"]
+resource_name = "phone_drop"
+length = 1.1666666
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Center/BenSprites")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"phone_drop"],
+"method": &"play"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_wc1io")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fwdu"]
+_data = {
+&"RESET": SubResource("Animation_kj1se"),
+&"phone_answer": SubResource("Animation_46ya5"),
+&"phone_answer_laugh": SubResource("Animation_tvotl"),
+&"phone_answer_no": SubResource("Animation_ppccw"),
+&"phone_answer_sillyface": SubResource("Animation_rtpiu"),
+&"phone_answer_yes": SubResource("Animation_pqeqe"),
+&"phone_drop": SubResource("Animation_7rbm1")
+}
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_wc1io"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqvqg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o3ccl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_s0oqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ngggl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7modg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c15bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w2qtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7loyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_isff2")
+}],
+"loop": false,
+"name": &"default_phone_ring",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_46ya5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4fwdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ohgtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_03dn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8wwdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h1vnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1eqyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_s0oqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ngggl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7modg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c15bt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_w2qtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7loyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_isff2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_alosr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wxkmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ofwpq")
+}],
+"loop": false,
+"name": &"phone_answer",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_kj1se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_w2l1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_f3lm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_r3sjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_313lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_gdq5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_gvw2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_bcktw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_hshfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_7dce5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_3nx5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_606si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_2rlsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_w3ioi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_mqxhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7ppe2")
+}],
+"loop": false,
+"name": &"phone_answer_laugh",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_boxdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_8twng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_a8jom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_mvjns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_r264a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_mvdhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_n28xw")
+}],
+"loop": false,
+"name": &"phone_answer_no",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_lf5ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_80c5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_rio8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_h8v4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_ywlpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_io8y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_46mjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_1ko3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_aitma")
+}],
+"loop": false,
+"name": &"phone_answer_sillyface",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_q8bqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_ya04r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_3whqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_mddl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_400vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_0oudy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_2h5tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_geked")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_aqx6f")
+}],
+"loop": false,
+"name": &"phone_answer_yes",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_dhmid")
+}],
+"loop": false,
+"name": &"phone_default",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_dhmid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_wc1io")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_7rbm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ppccw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tvotl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_rtpiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_pqeqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_kmjkx")
+}],
+"loop": false,
+"name": &"phone_drop",
+"speed": 8.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3ccl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqvqg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oafy4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3os3j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhji2"]
+
+[node name="MainRoom" type="Control" unique_id=1578481292]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nqvqg")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1503473255 groups=["animationplayer"]]
+libraries/ = SubResource("AnimationLibrary_4fwdu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1462445570 groups=["audioplayer"]]
+
+[node name="Mic" type="AudioStreamPlayer" parent="." unique_id=1186793464]
+stream = SubResource("AudioStreamMicrophone_wc1io")
+autoplay = true
+bus = &"Microphone"
+
+[node name="Center" type="Control" parent="." unique_id=561775732]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="BenSprites" type="AnimatedSprite2D" parent="Center" unique_id=784931405 groups=["ben"]]
+scale = Vector2(1.25, 1.25)
+sprite_frames = SubResource("SpriteFrames_nqvqg")
+animation = &"phone_drop"
+autoplay = "default"
+
+[node name="ClickableSpots" type="Control" parent="." unique_id=372970512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="DEFAULT" type="Control" parent="ClickableSpots" unique_id=1340608791]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="phone" type="Button" parent="ClickableSpots/DEFAULT" unique_id=1231678977]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 598.0
+offset_right = 842.0
+offset_bottom = 795.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o3ccl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nqvqg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oafy4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3os3j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hhji2")
+script = ExtResource("3_oafy4")
+animation = &"phone_answer"
+metadata/_custom_type_script = "uid://bsj3vhr83iif6"
+
+[node name="PhoneDropTimer" type="Timer" parent="." unique_id=217217810]
+wait_time = 5.0
+one_shot = true
+
+[node name="PhoneAnswerTimer" type="Timer" parent="." unique_id=34000477]
+wait_time = 0.8
+one_shot = true
