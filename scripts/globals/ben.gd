@@ -1,6 +1,7 @@
 extends Node
 
 enum States {
+	ANIMATION,
 	DEFAULT,
 	ON_PHONE,
 	NEWSPAPER,

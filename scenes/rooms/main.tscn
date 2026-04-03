@@ -11,7 +11,6 @@
 [ext_resource type="AudioStream" uid="uid://dqjb7hydaw7o" path="res://assets/sounds/no01.wav" id="4_7rbm1"]
 [ext_resource type="Texture2D" uid="uid://c8lsklnmnpts4" path="res://assets/anims/phone_ring/2.png" id="4_ngggl"]
 [ext_resource type="AudioStream" uid="uid://cq20g2lg8w7du" path="res://assets/sounds/phoneLaugh.wav" id="4_tvotl"]
-[ext_resource type="AudioStream" uid="uid://gmy0joqu4qrq" path="res://assets/sounds/phoneDrop.wav" id="4_wc1io"]
 [ext_resource type="Texture2D" uid="uid://b7s5aiw7mskhx" path="res://assets/anims/phone_ring/3.png" id="5_7modg"]
 [ext_resource type="Texture2D" uid="uid://d2qicnoee4hu1" path="res://assets/anims/phone_answer/3.png" id="5_ohgtf"]
 [ext_resource type="AudioStream" uid="uid://duhrg8kjubvhr" path="res://assets/sounds/yes01.wav" id="5_ppccw"]
@@ -87,6 +86,7 @@
 
 [sub_resource type="Animation" id="Animation_kj1se"]
 resource_name = "RESET"
+length = 0.033333335
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -141,20 +141,6 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1.1666666)
 }
 tracks/1/use_blend = true
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(2.7333333),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"_phone_reset"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_tvotl"]
 resource_name = "phone_answer_no"
@@ -287,39 +273,6 @@ tracks/1/keys = {
 }
 tracks/1/use_blend = true
 
-[sub_resource type="Animation" id="Animation_7rbm1"]
-resource_name = "phone_drop"
-length = 1.1666666
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Center/BenSprites")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [&"phone_drop"],
-"method": &"play"
-}]
-}
-tracks/1/type = "audio"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("4_wc1io")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/1/use_blend = true
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4fwdu"]
 _data = {
 &"RESET": SubResource("Animation_kj1se"),
@@ -327,8 +280,7 @@ _data = {
 &"phone_answer_laugh": SubResource("Animation_tvotl"),
 &"phone_answer_no": SubResource("Animation_ppccw"),
 &"phone_answer_sillyface": SubResource("Animation_rtpiu"),
-&"phone_answer_yes": SubResource("Animation_pqeqe"),
-&"phone_drop": SubResource("Animation_7rbm1")
+&"phone_answer_yes": SubResource("Animation_pqeqe")
 }
 
 [sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_wc1io"]
@@ -603,7 +555,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"phone_drop",
-"speed": 8.0
+"speed": 11.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3ccl"]
@@ -616,7 +568,7 @@ animations = [{
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhji2"]
 
-[node name="MainRoom" type="Control" unique_id=1578481292]
+[node name="MainRoom" type="Control" unique_id=1578481292 groups=["room"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -651,7 +603,6 @@ metadata/_edit_group_ = true
 [node name="BenSprites" type="AnimatedSprite2D" parent="Center" unique_id=784931405 groups=["ben"]]
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_nqvqg")
-animation = &"phone_drop"
 autoplay = "default"
 
 [node name="ClickableSpots" type="Control" parent="." unique_id=372970512]
@@ -684,7 +635,31 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_oafy4")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_3os3j")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_hhji2")
 script = ExtResource("3_oafy4")
-animation = &"phone_answer"
+calling = &"_phone_answer"
+metadata/_custom_type_script = "uid://bsj3vhr83iif6"
+
+[node name="ON_PHONE" type="Control" parent="ClickableSpots" unique_id=604212353]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="phone" type="Button" parent="ClickableSpots/ON_PHONE" unique_id=702684949]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 598.0
+offset_right = 842.0
+offset_bottom = 795.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_o3ccl")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nqvqg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oafy4")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3os3j")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hhji2")
+script = ExtResource("3_oafy4")
+calling = &"_phone_drop"
 metadata/_custom_type_script = "uid://bsj3vhr83iif6"
 
 [node name="PhoneDropTimer" type="Timer" parent="." unique_id=217217810]
