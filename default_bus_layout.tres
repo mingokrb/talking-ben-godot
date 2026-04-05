@@ -3,6 +3,9 @@
 [sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_g28q7"]
 resource_name = "SpectrumAnalyzer"
 
+[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
+resource_name = "PitchShift"
+
 [sub_resource type="AudioEffectRecord" id="AudioEffectRecord_j3pel"]
 resource_name = "Record"
 
@@ -12,6 +15,8 @@ resource_name = "SpectrumAnalyzer"
 [resource]
 bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_g28q7")
 bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectPitchShift_j3pel")
+bus/0/effect/1/enabled = true
 bus/1/name = &"Microphone"
 bus/1/solo = false
 bus/1/mute = true

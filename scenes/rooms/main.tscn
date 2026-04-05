@@ -100,6 +100,7 @@
 [ext_resource type="Texture2D" uid="uid://b4j3waexe82fb" path="res://assets/anims/phone_yes/7.png" id="72_2h5tc"]
 [ext_resource type="Texture2D" uid="uid://x3q1abnjbake" path="res://assets/anims/phone_yes/8.png" id="73_geked"]
 [ext_resource type="Texture2D" uid="uid://gvhb7xlr4rds" path="res://assets/anims/phone_yes/9.png" id="74_aqx6f"]
+[ext_resource type="Texture2D" uid="uid://dtq1o204qb7vt" path="res://assets/anims/listen/3.png" id="100_8twng"]
 
 [sub_resource type="Animation" id="Animation_kj1se"]
 resource_name = "RESET"
@@ -634,6 +635,14 @@ animations = [{
 "loop": false,
 "name": &"phone_drop",
 "speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("100_8twng")
+}],
+"loop": false,
+"name": &"phone_listen",
+"speed": 0.0
 }]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3ccl"]
@@ -681,7 +690,7 @@ metadata/_edit_group_ = true
 [node name="BenSprites" type="AnimatedSprite2D" parent="Center" unique_id=784931405 groups=["ben"]]
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_nqvqg")
-animation = &"default_speak"
+animation = &"phone_listen"
 autoplay = "default"
 
 [node name="ClickableSpots" type="Control" parent="." unique_id=372970512]
