@@ -1,5 +1,8 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://b38orkfav4xxi"]
 
+[sub_resource type="AudioEffectSpectrumAnalyzer" id="AudioEffectSpectrumAnalyzer_g28q7"]
+resource_name = "SpectrumAnalyzer"
+
 [sub_resource type="AudioEffectRecord" id="AudioEffectRecord_j3pel"]
 resource_name = "Record"
 
@@ -7,6 +10,8 @@ resource_name = "Record"
 resource_name = "SpectrumAnalyzer"
 
 [resource]
+bus/0/effect/0/effect = SubResource("AudioEffectSpectrumAnalyzer_g28q7")
+bus/0/effect/0/enabled = true
 bus/1/name = &"Microphone"
 bus/1/solo = false
 bus/1/mute = true

@@ -3,6 +3,8 @@ extends Node
 enum States {
 	ANIMATION,
 	DEFAULT,
+	DEFAULT_HEARING,
+	DEFAULT_SPEAKING,
 	ON_PHONE,
 	NEWSPAPER,
 }
@@ -13,5 +15,6 @@ var state: States = States.DEFAULT:
 		if state != new_state:
 			state = new_state
 			state_changed.emit(state)
+			print("Ben.state = Ben.States.%s" % States.keys()[new_state])
 
 var is_listening: bool = true

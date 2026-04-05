@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c8io0a5ymwv3s" path="res://assets/anims/phone_answer/6.png" id="8_h1vnn"]
 [ext_resource type="Texture2D" uid="uid://cmfb5ce4ssp7n" path="res://assets/anims/phone_answer/7.png" id="9_1eqyu"]
 [ext_resource type="Texture2D" uid="uid://o2hi0mbshtb0" path="res://assets/anims/phone_ring/7.png" id="9_isff2"]
+[ext_resource type="Texture2D" uid="uid://qxlegdsir28m" path="res://assets/anims/listen/2.png" id="9_kj1se"]
 [ext_resource type="Texture2D" uid="uid://5tf8wdn3uvte" path="res://assets/anims/phone_answer/8.png" id="10_s0oqf"]
 [ext_resource type="Texture2D" uid="uid://j1803u4gicvj" path="res://assets/anims/phone_answer/9.png" id="11_ngggl"]
 [ext_resource type="Texture2D" uid="uid://bedgq3b5sqji3" path="res://assets/anims/phone_answer/10.png" id="12_7modg"]
@@ -31,12 +32,28 @@
 [ext_resource type="Texture2D" uid="uid://ciqtu7v1m62x4" path="res://assets/anims/phone_answer/13.png" id="15_7loyl"]
 [ext_resource type="Texture2D" uid="uid://cxp15qrjojadm" path="res://assets/anims/phone_answer/14.png" id="16_isff2"]
 [ext_resource type="Texture2D" uid="uid://dnjsit11ad4a1" path="res://assets/anims/phone_answer/15.png" id="17_alosr"]
+[ext_resource type="Texture2D" uid="uid://cc36uvnktc23e" path="res://assets/anims/talk/1.png" id="17_boxdq"]
+[ext_resource type="Texture2D" uid="uid://cvhtrtu5c0nnf" path="res://assets/anims/talk/2.png" id="18_8twng"]
 [ext_resource type="Texture2D" uid="uid://c6qylxugmmt8s" path="res://assets/anims/phone_answer/16.png" id="18_wxkmr"]
+[ext_resource type="Texture2D" uid="uid://blllier3wg3nm" path="res://assets/anims/talk/3.png" id="19_a8jom"]
 [ext_resource type="Texture2D" uid="uid://d2vptfn5pv1p7" path="res://assets/anims/phone_answer/17.png" id="19_ofwpq"]
 [ext_resource type="Texture2D" uid="uid://q33uh284rt4r" path="res://assets/anims/default/3.png" id="20_dhmid"]
+[ext_resource type="Texture2D" uid="uid://ci2pmvmf1q5fq" path="res://assets/anims/talk/4.png" id="20_mvjns"]
+[ext_resource type="Texture2D" uid="uid://dv8bxl7xd8t46" path="res://assets/anims/talk/5.png" id="21_r264a"]
+[ext_resource type="Texture2D" uid="uid://c7y8rdbvmy7ti" path="res://assets/anims/talk/6.png" id="22_mvdhr"]
+[ext_resource type="Texture2D" uid="uid://b4ml1t1md74jt" path="res://assets/anims/talk/7.png" id="23_n28xw"]
+[ext_resource type="Texture2D" uid="uid://c3ugldjwbnkld" path="res://assets/anims/talk/8.png" id="24_lf5ak"]
+[ext_resource type="Texture2D" uid="uid://sobsq83jn2vn" path="res://assets/anims/talk/9.png" id="25_80c5n"]
+[ext_resource type="Texture2D" uid="uid://c0gr7on5m1tpn" path="res://assets/anims/talk/10.png" id="26_rio8x"]
+[ext_resource type="Texture2D" uid="uid://bcy270b888qbh" path="res://assets/anims/talk/11.png" id="27_h8v4r"]
+[ext_resource type="Texture2D" uid="uid://dsw2vr7arbwym" path="res://assets/anims/talk/12.png" id="28_ywlpl"]
+[ext_resource type="Texture2D" uid="uid://tp0s37del3o8" path="res://assets/anims/talk/13.png" id="29_io8y4"]
+[ext_resource type="Texture2D" uid="uid://gfmcrf58w5uo" path="res://assets/anims/talk/14.png" id="30_46mjm"]
 [ext_resource type="Texture2D" uid="uid://c1s6pai34db1l" path="res://assets/anims/phone_drop/1.png" id="30_dhmid"]
+[ext_resource type="Texture2D" uid="uid://bmdpdlr8ek3wn" path="res://assets/anims/talk/15.png" id="31_1ko3o"]
 [ext_resource type="Texture2D" uid="uid://chj7m2hnlcni7" path="res://assets/anims/phone_drop/2.png" id="31_wc1io"]
 [ext_resource type="Texture2D" uid="uid://ce0cohyptbnqh" path="res://assets/anims/phone_drop/3.png" id="32_7rbm1"]
+[ext_resource type="Texture2D" uid="uid://bgq2l7yb5aab8" path="res://assets/anims/talk/16.png" id="32_aitma"]
 [ext_resource type="Texture2D" uid="uid://dvjywvn0mpum7" path="res://assets/anims/phone_drop/4.png" id="33_ppccw"]
 [ext_resource type="Texture2D" uid="uid://b465outlh0sk0" path="res://assets/anims/phone_ho/1.png" id="34_kj1se"]
 [ext_resource type="Texture2D" uid="uid://ba1ls3f2d04g1" path="res://assets/anims/phone_drop/5.png" id="34_tvotl"]
@@ -297,6 +314,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_kj1se")
+}],
+"loop": false,
+"name": &"default_listen",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_s0oqf")
 }, {
 "duration": 1.0,
@@ -320,6 +345,59 @@ animations = [{
 "loop": false,
 "name": &"default_phone_ring",
 "speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_boxdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8twng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_a8jom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_mvjns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_r264a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mvdhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_n28xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lf5ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_80c5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rio8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_h8v4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ywlpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_io8y4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_46mjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_1ko3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_aitma")
+}],
+"loop": false,
+"name": &"default_speak",
+"speed": 0.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -603,6 +681,7 @@ metadata/_edit_group_ = true
 [node name="BenSprites" type="AnimatedSprite2D" parent="Center" unique_id=784931405 groups=["ben"]]
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_nqvqg")
+animation = &"default_speak"
 autoplay = "default"
 
 [node name="ClickableSpots" type="Control" parent="." unique_id=372970512]
@@ -661,6 +740,10 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_hhji2")
 script = ExtResource("3_oafy4")
 calling = &"_phone_drop"
 metadata/_custom_type_script = "uid://bsj3vhr83iif6"
+
+[node name="DefaultSpeakTimer" type="Timer" parent="." unique_id=248705999]
+wait_time = 0.8
+one_shot = true
 
 [node name="PhoneDropTimer" type="Timer" parent="." unique_id=217217810]
 wait_time = 5.0
