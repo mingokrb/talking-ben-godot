@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cmfb5ce4ssp7n" path="res://assets/anims/phone_answer/7.png" id="9_1eqyu"]
 [ext_resource type="Texture2D" uid="uid://o2hi0mbshtb0" path="res://assets/anims/phone_ring/7.png" id="9_isff2"]
 [ext_resource type="Texture2D" uid="uid://qxlegdsir28m" path="res://assets/anims/listen/2.png" id="9_kj1se"]
+[ext_resource type="Texture2D" uid="uid://co4d2hox0ifeg" path="res://assets/anims/blink/1.png" id="9_mvjns"]
 [ext_resource type="Texture2D" uid="uid://5tf8wdn3uvte" path="res://assets/anims/phone_answer/8.png" id="10_s0oqf"]
 [ext_resource type="Texture2D" uid="uid://j1803u4gicvj" path="res://assets/anims/phone_answer/9.png" id="11_ngggl"]
 [ext_resource type="Texture2D" uid="uid://bedgq3b5sqji3" path="res://assets/anims/phone_answer/10.png" id="12_7modg"]
@@ -100,6 +101,7 @@
 [ext_resource type="Texture2D" uid="uid://b4j3waexe82fb" path="res://assets/anims/phone_yes/7.png" id="72_2h5tc"]
 [ext_resource type="Texture2D" uid="uid://x3q1abnjbake" path="res://assets/anims/phone_yes/8.png" id="73_geked"]
 [ext_resource type="Texture2D" uid="uid://gvhb7xlr4rds" path="res://assets/anims/phone_yes/9.png" id="74_aqx6f"]
+[ext_resource type="Texture2D" uid="uid://c8h6t03i8t37c" path="res://assets/anims/phone_blink/1.png" id="93_r264a"]
 [ext_resource type="Texture2D" uid="uid://dtq1o204qb7vt" path="res://assets/anims/listen/3.png" id="100_8twng"]
 
 [sub_resource type="Animation" id="Animation_kj1se"]
@@ -306,12 +308,15 @@ _data = {
 [sub_resource type="SpriteFrames" id="SpriteFrames_nqvqg"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 50.0,
 "texture": ExtResource("1_o3ccl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mvjns")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
-"speed": 0.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -600,12 +605,15 @@ animations = [{
 "speed": 11.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 30.0,
 "texture": ExtResource("20_dhmid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_r264a")
 }],
-"loop": false,
+"loop": true,
 "name": &"phone_default",
-"speed": 0.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -690,7 +698,6 @@ metadata/_edit_group_ = true
 [node name="BenSprites" type="AnimatedSprite2D" parent="Center" unique_id=784931405 groups=["ben"]]
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_nqvqg")
-animation = &"phone_listen"
 autoplay = "default"
 
 [node name="ClickableSpots" type="Control" parent="." unique_id=372970512]
